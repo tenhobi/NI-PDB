@@ -1,0 +1,50 @@
+== MongoDB
+
+.Create script
+[%collapsible]
+====
+[source, javascript]
+----
+// TODO CREATE script
+----
+====
+
+=== 1. Find movies with the title “Passengers”. Return movie titles and years.
+
+=== 2. Find movies with “The” contained in the title. Return movie titles and years.
+
+=== 3. Find movies directed by James Cameron. Return movie titles together with all the actor full names (merged first and last names) that acted in those movies.
+
+=== 4. Find movies with connection (actor, director, soundtrack writer, …) to some person from Germany. Return movie titles and years together with all person first and last names, sorted by movie title, ascending, and then last name, descending.
+
+=== 5. Find movie titles in which Al Pacino or Julia Roberts acted in.
+
+=== 6. Find movie titles in which Tom Hanks has some connection to it, but did not act in it.
+
+=== 7. Find movies where at least one actor played.
+
+=== 8. Find movies with most people with awards and award nominations. Return movie titles, count of awards and count of award nominations, sorted in descending order by award counts. Display only movies that have at least 1 award or nomination.
+
+=== 9. Find people that acted in any movie (aka actors). Return person first and last names and years of birth ordered by the year, last name, first name, each in ascending order. Limit the output to 10 results.
+
+=== 10. Count people by country of origin. Return country name and the count, ordered by the count value.
+
+=== 11. Find people that both acted in and directed some movies. Return person first and last name together with movie titles and years. Order output by movie year in descending order and person last name and first name in ascending order.
+
+=== 12. Find actors (people that acted in some movie) that did not act with Leonardo DiCaprio in the same movie. Return person first and last names and country of origin, sorted by person first and last name in ascending order.
+
+=== 13. Find people that acted in a movie in the role of Neo. Return movie titles together with person first and last names, sorted by year of a movie in descending order.
+
+=== 14. Find 5 oldest people that worked (in any role) on a movie. Return person last names and years of birth, ordered by year of birth in ascending order.
+
+=== 15. Find people that wrote a soundtrack for a movie The Hunger Games. Find all movies they made the soundtrack for. Return movie titles, years and length ordered by movie years in descending order.
+
+=== 16. Find people that got (did win) a Best Actor award. Return person first and last names, country of origin together with award names, categories and years, ordered by person last and first name in ascending order.
+
+=== 17. Find people that were nominated (didn’t win) for an award in the category Golden Globes.
+
+=== 18. Find movies with genre fantasy.
+
+=== 19. Find movie titles and years with genre adventure, but that does not have genre Drama. Return movie titles and years together with genre names, ordered by year in descending order and genre name in ascending order.
+
+=== 20. Find people that acted in a mystery movie. Return actors first and last name, sorted by last and first name in ascending.

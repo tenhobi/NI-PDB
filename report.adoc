@@ -1,0 +1,75 @@
+= NI-PDB Semestral work
+
+Semestral work focuses on additional exercises on 2 topics, we chose to make exercises for MongoDB and Neo4j databases.
+
+== Authors
+
+* Jan Bittner (bittnja3)
+* Justína Kušpalová (kuspajus)
+
+== Context
+
+Our database focuse on movies database and contains basic data about the movie, actors, directors, soundtrack writers, genres, awards etc.
+
+We work with this data structure:
+
+*Person*
+
+* first name
+* last name
+* year of birth
+* country
+
+*Movie*
+
+* title
+* year
+* length
+
+*Genre*
+
+* name
+
+*Relations:*
+
+* Person:Movie directed
+* Person:Movie wrote_soundtrack
+* Person:Movie acted_in (role)
+* Movie:Genre has
+* Movie:Person award
+* Movie:Person award nomination
+
+== Queries
+
+In both databases, we use following queries:
+
+. Find movies with the title "Passengers". Return movie titles and years.
+. Find movies with "The" contained in the title. Return movie titles and years.
+. Find movies directed by James Cameron. Return movie titles together with all the actor full names (merged first and last names) that acted in those movies.
+. Find movies with connection (actor, director, soundtrack writer, …) to some person from Germany. Return movie titles and years together with all person first and last names, sorted by movie title, ascending, and then last name, descending.
+. Find movie titles in which Al Pacino or Julia Roberts acted in.
+. Find movie titles in which Tom Hanks has some connection to it, but did not act in it.
+. Find movies where at least one actor played.
+. Find movies with most people with awards and award nominations. Return movie titles, count of awards and count of award nominations, sorted in descending order by award counts. Display only movies that have at least 1 award or nomination.
+. Find people that acted in any movie (aka actors). Return person first and last names and years of birth ordered by the year, last name, first name, each in ascending order. Limit the output to 10 results.
+. Count people by country of origin. Return country name and the count, ordered by the count value.
+. Find people that both acted in and directed some movies. Return person first and last name together with movie titles and years. Order output by movie year in descending order and person last name and first name in ascending order.
+. Find actors (people that acted in some movie) that did not act with Leonardo DiCaprio in the same movie. Return person first and last names and country of origin, sorted by person first and last name in ascending order.
+. Find people that acted in a movie in the role of Neo. Return movie titles together with person first and last names, sorted by year of a movie in descending order.
+. Find 5 oldest people that worked (in any role) on a movie. Return person last names and years of birth, ordered by year of birth in ascending order.
+. Find people that wrote a soundtrack for a movie The Hunger Games. Find all movies they made the soundtrack for. Return movie titles, years and length ordered by movie years in descending order.
+. Find people that got (did win) a Best Actor award. Return person first and last names, country of origin together with award names, categories and years, ordered by person last and first name in ascending order.
+. Find people that were nominated (didn’t win) for an award in the category Golden Globes.
+. Find movies with genre fantasy.
+. Find movie titles and years with genre adventure, but that does not have genre Drama. Return movie titles and years together with genre names, ordered by year in descending order and genre name in ascending order.
+. Find people that acted in a mystery movie. Return actors first and last name, sorted by last and first name in ascending.
+
+:imagesdir: neo4j
+include::neo4j/neo4j.adoc[]
+
+:imagesdir: mongodb
+include::mongodb/mongodb.adoc[]
+
+== Conclusion
+
+TODO
