@@ -1,4 +1,6 @@
 = NI-PDB Semestral work
+:toc: preamble
+:toclevels: 1
 
 Semestral work focuses on additional exercises on 2 topics, we chose to make exercises for MongoDB and Neo4j databases.
 
@@ -9,7 +11,10 @@ Semestral work focuses on additional exercises on 2 topics, we chose to make exe
 
 == Context
 
-Our database focuse on movies database and contains basic data about the movie, actors, directors, soundtrack writers, genres, awards etc.
+We are movies enthusiasts,
+so we decided to create a movie database.
+
+We created our own database that contains data about movies, actors, directors, soundtrack writers, genres, awards etc.
 
 We work with this data structure:
 
@@ -39,16 +44,17 @@ We work with this data structure:
 * Movie:Person award
 * Movie:Person award nomination
 
+<<<
 == Queries
 
-In both databases, we use following queries:
+In both databases, we do these queries:
 
 . Find movies with the title "Passengers". Return movie titles and years.
 . Find movies with "The" contained in the title. Return movie titles and years.
 . Find movies directed by James Cameron. Return movie titles together with all the actor full names (merged first and last names) that acted in those movies.
 . Find movies with connection (actor, director, soundtrack writer, …) to some person from Germany. Return movie titles and years together with all person first and last names, sorted by movie title, ascending, and then last name, descending.
 . Find movie titles in which Al Pacino or Julia Roberts acted in.
-. Find movie titles in which Tom Hanks has some connection to it, but did not act in it.
+. Find movie titles in which Tom Hanks has some connection to it (with excluded acted in connection).
 . Find movies where at least one actor played.
 . Find movies with most people with awards and award nominations. Return movie titles, count of awards and count of award nominations, sorted in descending order by award counts. Display only movies that have at least 1 award or nomination.
 . Find people that acted in any movie (aka actors). Return person first and last names and years of birth ordered by the year, last name, first name, each in ascending order. Limit the output to 10 results.
@@ -61,15 +67,31 @@ In both databases, we use following queries:
 . Find people that got (did win) a Best Actor award. Return person first and last names, country of origin together with award names, categories and years, ordered by person last and first name in ascending order.
 . Find people that were nominated (didn’t win) for an award in the category Golden Globes.
 . Find movies with genre fantasy.
-. Find movie titles and years with genre adventure, but that does not have genre Drama. Return movie titles and years together with genre names, ordered by year in descending order and genre name in ascending order.
+. Find movie titles and years with genre Adventure, but that does not have genre Drama. Return movie titles and years together with genre names, ordered by year in descending order and genre name in ascending order.
 . Find people that acted in a mystery movie. Return actors first and last name, sorted by last and first name in ascending.
 
+<<<
 :imagesdir: neo4j
 include::neo4j/neo4j.adoc[]
 
+<<<
 :imagesdir: mongodb
 include::mongodb/mongodb.adoc[]
 
+<<<
 == Conclusion
 
-TODO
+With modified data for each database,
+we accomplished to make every query.
+
+Although it seems,
+that both MongoDB and Neo4j are able to make every type of query,
+Neo4j just seems MUCH friendly to use.
+Queries in MongoDB can be very complicated,
+especially with complex joining and data manipulation.
+
+We would welcome a deeper practise in our classes (for both technologies),
+because with the knowledge from it,
+we would not be able to make most of the queries we did in this work.
+
+Overall, Neo4j seems like much more mature and advanced solution to use on data with some kind of relations.

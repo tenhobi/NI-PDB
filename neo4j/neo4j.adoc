@@ -1,5 +1,8 @@
 == Neo4j
 
+.Graph representation of database in Neo4j
+image::database-graph.jpg[align="center"]
+
 .Create script
 [%collapsible]
 ====
@@ -461,10 +464,6 @@ CREATE
 ----
 ====
 
-[.text-center]
-.Graph representation of database in Neo4j
-image::database-graph.png[align="center"]
-
 === 1. Find movies with the title "Passengers". Return movie titles and years.
 
 We are asked to find an exact match,
@@ -535,7 +534,7 @@ WHERE (a.firstName = 'Al' and a.lastName = 'Pacino') or (a.firstName = 'Julia' a
 RETURN DISTINCT m.title
 ----
 
-=== 6. Find movie titles in which Tom Hanks has some connection to it, but did not act in it.
+=== 6. Find movie titles in which Tom Hanks has some connection to it (with excluded acted in connection).
 
 This task is a bit tricky.
 Tom Hanks directed the movie Larry Crowne, but also played in it.
@@ -747,7 +746,7 @@ MATCH (m:Movie)-[:GENRE]-(:Genre {name:'Fantasy'})
 RETURN m.title
 ----
 
-=== 19. Find movie titles and years with genre adventure, but that does not have genre Drama. Return movie titles and years together with genre names, ordered by year in descending order and genre name in ascending order.
+=== 19. Find movie titles and years with genre Adventure, but that does not have genre Drama. Return movie titles and years together with genre names, ordered by year in descending order and genre name in ascending order.
 
 We are asked to find all genres of movies that have genre Adventure, but don't have genre Drama.
 First, we `MATCH` a movie.
