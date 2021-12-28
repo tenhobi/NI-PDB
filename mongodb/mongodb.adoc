@@ -296,7 +296,7 @@ db.movies.aggregate([
         $match: {
             $or: [
                 {"actorsDetail.name.first": "Julia", "actorsDetail.name.last": "Roberts"},
-                {"actorsDetail.name.last": "Al", "actorsDetail.name.last": "Pacino"}
+                {"actorsDetail.name.first": "Al", "actorsDetail.name.last": "Pacino"}
             ]
         }
     },
