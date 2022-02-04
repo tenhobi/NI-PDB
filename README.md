@@ -4,7 +4,7 @@ Our work on NI-PDB in semester B211 at [FIT CTU](https://fit.cvut.cz/en).
 
 ## TL;DR
 
-It ain't mutch, but it's an honest work. :thumbsup:
+It ain't much, but it's honest work. :thumbsup:
 
 ## Semestral work
 
